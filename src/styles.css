@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.admin-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  flex: 0 0 auto;
+}
+
+.admin-sidebar {
+  flex: 1 1 0;
+}
+
+.admin-menu {
+  width: 300px;
+}
+
+.admin-sidebar-content {
+  padding: 10px;
+}
+
+.admin-sidebar-header {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.admin-sidebar-header img {
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.admin-sidebar-header p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.menu-item {
+  margin: 10px 0;
+}
+
+.menu-item button {
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toolbar-icon-menu {
+  display: none;
+}
+
+.toolbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolbar-logo p {
+  font-size: 1rem;
+  margin: 0;
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+@media (max-width: 850px) {
+  .toolbar-icon-menu {
+    display: block;
+  }
+}

@@ -1,0 +1,16 @@
+<mat-nav-list class="admin-sidebar-content">
+    <div class="admin-sidebar-header">
+        <img matCardImageMedium src="assets/images/profile.jpg" alt="profileImage">
+        <p class="mat-body-1">Jean Ramos Masgo</p>
+        <p class="mat-body-2">Administrador</p>
+    </div>
+    <mat-divider></mat-divider>
+    <div *ngFor="let item of listMenu">
+        <mat-list-item class="menu-item">
+            <button color="primary" mat-stroked-button>
+                <mat-icon>{{item.icon}}</mat-icon> &nbsp;
+                {{item.name}}
+            </button>
+        </mat-list-item>
+    </div>
+</mat-nav-list>

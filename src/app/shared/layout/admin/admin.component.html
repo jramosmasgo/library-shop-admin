@@ -1,0 +1,13 @@
+<app-toolbar [inputSideNav]="sidenav" class="admin-header"></app-toolbar>
+<mat-drawer-container class="admin-sidebar">
+    <mat-drawer #sidenav class="admin-menu" opened [mode]="!flag ? 'side':'over'">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content style="padding: 10px;">
+        <app-content titleComponent="Hola Mundo">
+            <form action="">
+                <button>hola</button>
+            </form>
+        </app-content>
+    </mat-drawer-content>
+</mat-drawer-container>
