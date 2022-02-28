@@ -2,19 +2,16 @@ import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styles: [
-  ]
+  selector: 'app-layout-admin',
+  templateUrl: './adminLayout.component.html',
+  styles: [],
 })
-export class AdminComponent implements OnInit {
-
-  constructor() { }
+export class AdminLayoutComponent implements OnInit {
+  constructor() {}
 
   flag: boolean = false;
   @ViewChild('sidenav') sidenav?: MatSidenav;
   @HostListener('window:resize', ['$event'])
-
   onResize(event: any) {
     if (event.target.innerWidth < 850) {
       this.sidenav?.close();
@@ -25,7 +22,5 @@ export class AdminComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
