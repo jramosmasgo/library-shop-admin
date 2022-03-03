@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import {
   ActivatedRouteSnapshot,
   CanActivate,
   Router,
   RouterStateSnapshot,
-  UrlTree,
-} from '@angular/router';
-import { Observable } from 'rxjs';
+  UrlTree
+} from "@angular/router";
+import { Observable } from "rxjs";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root"
 })
 export class AuthGuard implements CanActivate {
   constructor(private router: Router) {}
@@ -22,10 +22,10 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    const jwtAuth = localStorage.getItem('authToken');
+    const jwtAuth = localStorage.getItem("authToken");
 
     if (jwtAuth) {
-      return this.router.navigate(['/admin', 'home']);
+      return this.router.navigate(["/admin", "home"]);
     }
 
     return true;

@@ -1,18 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-content',
-  templateUrl: './content.component.html',
-  styles: [
-  ]
+  selector: "app-content",
+  templateUrl: "./content.component.html",
+  styles: []
 })
 export class ContentComponent implements OnInit {
+  @Input() titleComponent: string = "Sin titulo";
 
-  @Input() titleComponent: string = 'Sin titulo';
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

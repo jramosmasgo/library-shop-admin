@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { CategoryService } from 'src/app/core/services/category.service';
-import { Category } from 'src/app/shared/models/category/category.model';
+import { Component, OnInit } from "@angular/core";
+import { CategoryService } from "src/app/core/services/category.service";
+import { Category } from "src/app/shared/models/category/category.model";
 
 @Component({
-  selector: 'app-categories',
-  templateUrl: './categories.component.html',
-  styles: [],
+  selector: "app-categories",
+  templateUrl: "./categories.component.html",
+  styles: []
 })
 export class CategoriesComponent implements OnInit {
   constructor(private categoryService: CategoryService) {}
@@ -19,7 +19,7 @@ export class CategoriesComponent implements OnInit {
   getAllCategories(): void {
     this.categoryService.getAllCategories().subscribe({
       next: (res) => (this.categories = res),
-      error: (err) => console.log(err),
+      error: (err) => console.log(err)
     });
   }
 }

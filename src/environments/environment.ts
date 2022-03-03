@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  urlServie: 'https://localhost:9001/api/backoffice',
-  urlAuth: 'https://localhost:9001/api/Account',
+  urlServie: "https://localhost:9001/api/backoffice",
+  urlAuth: "https://localhost:9001/api/Account"
 };
 
 /*

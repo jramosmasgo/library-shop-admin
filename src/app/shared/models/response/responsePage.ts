@@ -1,4 +1,4 @@
-import { IResponseServer } from './response';
+import { IResponseServer } from "./response";
 
 export interface IResponsePageServer<T> extends IResponseServer<T> {
   pageNumber: number;

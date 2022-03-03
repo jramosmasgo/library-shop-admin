@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import {
   AbstractControl,
   FormBuilder,
   FormGroup,
   ValidationErrors,
-  Validators,
-} from '@angular/forms';
-import { Register } from 'src/app/shared/models/auth/register.model';
+  Validators
+} from "@angular/forms";
+import { Register } from "src/app/shared/models/auth/register.model";
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styles: [],
+  selector: "app-register",
+  templateUrl: "./register.component.html",
+  styles: []
 })
 export class RegisterComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {}
@@ -21,13 +21,13 @@ export class RegisterComponent implements OnInit {
 
   formRegister: FormGroup = this.formBuilder.group(
     {
-      userName: ['', [Validators.required, Validators.maxLength(30)]],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
-      confirmPassword: ['', Validators.required],
+      userName: ["", [Validators.required, Validators.maxLength(30)]],
+      email: ["", [Validators.required, Validators.email]],
+      password: ["", [Validators.required]],
+      confirmPassword: ["", Validators.required]
     },
     {
-      Validators: [this.validateEqualFields('password', 'confirmPassword')],
+      Validators: [this.validateEqualFields("password", "confirmPassword")]
     }
   );
 

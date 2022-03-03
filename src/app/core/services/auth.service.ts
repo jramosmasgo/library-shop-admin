@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { IResponseServer } from 'src/app/shared/models/response/response';
-import { Login } from 'src/app/shared/models/auth/login.model';
-import { UserLogin } from 'src/app/shared/models/user/userLogin';
-import { Register } from 'src/app/shared/models/auth/register.model';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { environment } from "src/environments/environment";
+import { IResponseServer } from "src/app/shared/models/response/response";
+import { Login } from "src/app/shared/models/auth/login.model";
+import { UserLogin } from "src/app/shared/models/user/userLogin";
+import { Register } from "src/app/shared/models/auth/register.model";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root"
 })
 export class AuthService {
   constructor(private httpClient: HttpClient) {}
