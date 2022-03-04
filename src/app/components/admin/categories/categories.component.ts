@@ -10,15 +10,19 @@ import { Category } from "src/app/shared/models/category/category.model";
 export class CategoriesComponent implements OnInit {
   constructor(private categoryService: CategoryService) {}
 
-  categories: Category[] = [];
+  categories: Category[] = [
+    { name: "terror", id: 1, order: 1 },
+    { name: "comedia", id: 1, order: 1 },
+    { name: "ciencia ficcion", id: 1, order: 1 }
+  ];
 
   ngOnInit(): void {
-    this.getAllCategories();
+    // this.getAllCategories();
   }
 
   getAllCategories(): void {
     this.categoryService.getAllCategories().subscribe({
-      next: (res) => (this.categories = res),
+      next: (res) => console.log(res),
       error: (err) => console.log(err)
     });
   }
